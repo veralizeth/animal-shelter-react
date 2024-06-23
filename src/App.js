@@ -1,13 +1,13 @@
 import './App.css';
-import DonationForm from './components/DonationForm'
+import { Routes, Route } from 'react-router-dom';
+import DonationForm from './components/DonationForm';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-      <DonationForm />
-    </div>
-  );
+    return (
+        <Routes>
+            <Route path="/" element={<DonationForm />}></Route>
+        </Routes>
+    );
 }
 
 export default App;
