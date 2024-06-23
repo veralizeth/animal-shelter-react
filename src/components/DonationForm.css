@@ -1,0 +1,63 @@
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='date'] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type='button'] {
+    background-color: #008cba;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button[type='button']:hover {
+    background-color: #007bb5;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: #e1e1e1;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+}

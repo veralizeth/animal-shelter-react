@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import './DonationForm.css';
 
 const DonationForm = () => {
     const [money, setMoney] = useState('');
@@ -54,6 +55,9 @@ const DonationForm = () => {
                 setData([...data, res.data]);
                 setName('');
                 setDate('');
+                setFoodItems([]);
+                setClothesItems([]);
+                setMoney('');
             })
             .catch((err) => console.log(err));
     };
