@@ -69,3 +69,8 @@ ul li {
     cursor: pointer;
     align-items: center;
 }
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}

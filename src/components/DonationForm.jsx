@@ -11,6 +11,7 @@ const DonationForm = () => {
     const [name, setName] = useState('');
     const [date, setDate] = useState('');
     const [data, setData] = useState([]);
+    const [error, setError] = useState('');
 
     const handleMoneyChange = (event) => {
         setMoney(event.target.value);
@@ -39,6 +40,13 @@ const DonationForm = () => {
     };
     const handleSubmit = (event) => {
         event.preventDefault();
+        if (!money && foodItems.length === 0 && clothesItems.length === 0) {
+            setError(
+                'Please provide at least one type of donation: money, food, or clothes.'
+            );
+            return;
+        }
+
         const id = Math.random();
         axios
             .post('http://localhost:3001/data', {
@@ -75,8 +83,10 @@ const DonationForm = () => {
 
     return (
         <form onSubmit={handleSubmit}>
+            {error && <div className="error-message">{error}</div>}
             <div>
                 <input
+                    required
                     type="text"
                     placeholder="Enter Name"
                     onChange={(e) => setName(e.target.value)}
@@ -151,6 +161,7 @@ const DonationForm = () => {
                     type="date"
                     placeholder="Select a Date"
                     onChange={(e) => setDate(e.target.value)}
+                    required
                 ></input>
             </div>
             <button>Add</button>

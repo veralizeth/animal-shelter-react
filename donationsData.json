@@ -389,6 +389,36 @@
         "money": "1200"
       },
       "date": ""
+    },
+    {
+      "id": 0.8072477617519358,
+      "name": "",
+      "donations": {
+        "clothesItems": [],
+        "foodItems": [],
+        "money": ""
+      },
+      "date": ""
+    },
+    {
+      "id": 0.8361083866116754,
+      "name": "Lizeth",
+      "donations": {
+        "clothesItems": [],
+        "foodItems": [],
+        "money": "1200"
+      },
+      "date": "2024-06-22"
+    },
+    {
+      "id": 0.5305850658918645,
+      "name": "d",
+      "donations": {
+        "clothesItems": [],
+        "foodItems": [],
+        "money": "1200"
+      },
+      "date": ""
     }
   ]
 }
