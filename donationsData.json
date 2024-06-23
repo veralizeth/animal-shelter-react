@@ -359,6 +359,36 @@
         "money": ""
       },
       "date": ""
+    },
+    {
+      "id": 0.0900694246500946,
+      "name": "",
+      "donations": {
+        "clothesItems": [],
+        "foodItems": [],
+        "money": "1200"
+      },
+      "date": ""
+    },
+    {
+      "id": 0.8720998788030254,
+      "name": "",
+      "donations": {
+        "clothesItems": [],
+        "foodItems": [],
+        "money": ""
+      },
+      "date": ""
+    },
+    {
+      "id": 0.5189211460538747,
+      "name": "",
+      "donations": {
+        "clothesItems": [],
+        "foodItems": [],
+        "money": "1200"
+      },
+      "date": ""
     }
   ]
 }

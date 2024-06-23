@@ -62,6 +62,17 @@ const DonationForm = () => {
             .catch((err) => console.log(err));
     };
 
+    const removeClothesItem = (index) => {
+        // Using (_) Just need to access the index of the array but no need to use the element itself.
+        const newClothesItems = clothesItems.filter((_, i) => i !== index);
+        setClothesItems(newClothesItems);
+    };
+
+    const removeFoodItem = (index) => {
+        const newFoodItems = foodItems.filter((_, i) => i !== index);
+        setFoodItems(newFoodItems);
+    };
+
     return (
         <form onSubmit={handleSubmit}>
             <div>
@@ -95,7 +106,16 @@ const DonationForm = () => {
                 </label>
                 <ul>
                     {foodItems.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index}>
+                            {item}
+                            <button
+                                className="remove-item-btn"
+                                type="button"
+                                onClick={() => removeFoodItem(index)}
+                            >
+                                <span className="icon">X</span>
+                            </button>
+                        </li>
                     ))}
                 </ul>
             </div>
@@ -113,7 +133,16 @@ const DonationForm = () => {
                 </label>
                 <ul>
                     {clothesItems.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index}>
+                            {item}
+                            <button
+                                type="button"
+                                className="remove-item-btn"
+                                onClick={() => removeClothesItem(index)}
+                            >
+                                <span className="icon">X</span>
+                            </button>
+                        </li>
                     ))}
                 </ul>
             </div>

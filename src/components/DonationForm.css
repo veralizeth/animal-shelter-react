@@ -61,3 +61,11 @@ ul li {
     padding: 8px;
     border-radius: 4px;
 }
+
+.remove-item-btn {
+    background-color: #ff4d4d !important;
+    padding: 5px 10px;
+    font-size: 10px;
+    cursor: pointer;
+    align-items: center;
+}
