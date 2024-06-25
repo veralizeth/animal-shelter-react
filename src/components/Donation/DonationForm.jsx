@@ -6,8 +6,8 @@ const DonationForm = () => {
     const [money, setMoney] = useState('');
     const [foodItems, setFoodItems] = useState([]);
     const [clothesItems, setClothesItems] = useState([]);
-    const [foodInput, setFoodInput] = useState('');
-    const [clothesInput, setClothesInput] = useState('');
+    const [foodInput, setFoodInput] = useState([]);
+    const [clothesInput, setClothesInput] = useState([]);
     const [name, setName] = useState('');
     const [date, setDate] = useState('');
     const [data, setData] = useState([]);
@@ -47,7 +47,9 @@ const DonationForm = () => {
             return;
         }
 
-        const id = Math.random();
+        const id =
+            Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+
         axios
             .post('http://localhost:3001/data', {
                 id: id,

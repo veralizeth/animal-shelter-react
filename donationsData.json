@@ -1,424 +1,310 @@
 {
   "data": [
     {
-      "ID": 1,
-      "Name": "Paul Walker",
-      "Donations": {
-        "Food": [
-          "nuts",
-          "seeds"
-        ],
-        "Money": 813,
-        "Clothes": [
-          "suit",
-          "tie"
-        ]
-      },
-      "Date": "2022-02-25",
-      "id": "65e9"
-    },
-    {
-      "ID": 2,
-      "Name": "Mona Taylor",
-      "Donations": {
-        "Food": [
+      "id": "49ee",
+      "name": "Mona Taylor",
+      "donations": {
+        "foodItems": [
           "rice",
-          "lentils"
+          "lentis"
         ],
-        "Money": 231,
-        "Clothes": [
-          "t-shirt",
-          "shorts"
-        ]
+        "money": 231
       },
-      "Date": "2022-01-01",
-      "id": "49ee"
+      "date": ""
     },
     {
-      "ID": 3,
-      "Name": "Karen Davis",
-      "Donations": {
-        "Food": [
+      "name": "Karen Davis",
+      "donations": {
+        "foodItems": [
           "fish",
           "chips"
         ],
-        "Money": 881,
-        "Clothes": [
+        "money": 881,
+        "clothes": [
           "sweater",
           "skirt"
         ]
       },
-      "Date": "2022-08-24",
+      "date": "2022-08-24",
       "id": "affc"
     },
     {
-      "ID": 4,
-      "Name": "Ivy White",
-      "Donations": {
-        "Food": [
+      "name": "Ivy White",
+      "donations": {
+        "foodItems": [
           "bread",
           "butter"
         ],
-        "Money": 725,
-        "Clothes": [
+        "money": 725,
+        "clothes": [
           "jacket",
           "coat"
         ]
       },
-      "Date": "2024-12-23",
+      "date": "2024-12-23",
       "id": "478a"
     },
     {
-      "ID": 5,
-      "Name": "Ivy White",
-      "Donations": {
-        "Food": [
+      "name": "Ivy White",
+      "donations": {
+        "foodItems": [
           "potatoes",
           "gravy"
         ],
-        "Money": 133,
-        "Clothes": [
+        "money": 133,
+        "clothes": [
           "jeans",
           "blouse"
         ]
       },
-      "Date": "2024-05-30",
+      "date": "2024-05-30",
       "id": "dce9"
     },
     {
-      "ID": 6,
-      "Name": "Eve Adams",
-      "Donations": {
-        "Food": [
+      "name": "Eve Adams",
+      "donations": {
+        "foodItems": [
           "rice",
           "lentils"
         ],
-        "Money": 127,
-        "Clothes": [
+        "money": 127,
+        "clothes": [
           "belt",
           "tie"
         ]
       },
-      "Date": "2023-10-12",
+      "date": "2023-10-12",
       "id": "67f7"
     },
     {
-      "ID": 7,
-      "Name": "Rachel Moore",
-      "Donations": {
-        "Food": [
+      "name": "Rachel Moore",
+      "donations": {
+        "foodItems": [
           "pasta",
           "tomato sauce"
         ],
-        "Money": 199,
-        "Clothes": [
+        "money": 199,
+        "clothes": [
           "hat",
           "gloves"
         ]
       },
-      "Date": "2022-05-09",
+      "date": "2022-05-09",
       "id": "b040"
     },
     {
-      "ID": 8,
-      "Name": "Jane Doe",
-      "Donations": {
-        "Food": [
+      "name": "Jane Doe",
+      "donations": {
+        "foodItems": [
           "cereal",
           "milk"
         ],
-        "Money": 665,
-        "Clothes": [
+        "money": 665,
+        "clothes": [
           "shirt",
           "pants"
         ]
       },
-      "Date": "2024-03-07",
+      "date": "2024-03-07",
       "id": "104e"
     },
     {
-      "ID": 9,
-      "Name": "Oscar Perez",
-      "Donations": {
-        "Food": [
+      "name": "Oscar Perez",
+      "donations": {
+        "foodItems": [
           "fruits",
           "vegetables"
         ],
-        "Money": 101,
-        "Clothes": [
+        "money": 101,
+        "clothes": [
           "socks",
           "shoes"
         ]
       },
-      "Date": "2022-06-17",
+      "date": "2022-06-17",
       "id": "8c6a"
     },
     {
-      "ID": 10,
-      "Name": "Grace Lee",
-      "Donations": {
-        "Food": [
+      "name": "Grace Lee",
+      "donations": {
+        "foodItems": [
           "nuts",
           "seeds"
         ],
-        "Money": 832,
-        "Clothes": [
+        "money": 832,
+        "clothes": [
           "dress",
           "scarf"
         ]
       },
-      "Date": "2023-12-13",
+      "date": "2023-12-13",
       "id": "05e0"
     },
     {
-      "ID": 11,
-      "Name": "Jack Black",
-      "Donations": {
-        "Food": [
+      "name": "Jack Black",
+      "donations": {
+        "foodItems": [
           "fish",
           "chips"
         ],
-        "Money": 233,
-        "Clothes": [
+        "money": 233,
+        "clothes": [
           "jacket",
           "coat"
         ]
       },
-      "Date": "2024-09-04",
+      "date": "2024-09-04",
       "id": "b090"
     },
     {
-      "ID": 12,
-      "Name": "Diana Prince",
-      "Donations": {
-        "Food": [
+      "name": "Diana Prince",
+      "donations": {
+        "foodItems": [
           "potatoes",
           "gravy"
         ],
-        "Money": 569,
-        "Clothes": [
+        "money": 569,
+        "clothes": [
           "shirt",
           "pants"
         ]
       },
-      "Date": "2023-05-22",
+      "date": "2023-05-22",
       "id": "1213"
     },
     {
-      "ID": 13,
-      "Name": "Nina Martin",
-      "Donations": {
-        "Food": [
+      "name": "Nina Martin",
+      "donations": {
+        "foodItems": [
           "soup",
           "crackers"
         ],
-        "Money": 793,
-        "Clothes": [
+        "money": 793,
+        "clothes": [
           "socks",
           "shoes"
         ]
       },
-      "Date": "2023-11-08",
+      "date": "2023-11-08",
       "id": "6c44"
     },
     {
       "ID": 14,
-      "Name": "Charlie Brown",
-      "Donations": {
-        "Food": [
+      "name": "Charlie Brown",
+      "donations": {
+        "foodItems": [
           "bread",
           "butter"
         ],
-        "Money": 278,
-        "Clothes": [
+        "money": 278,
+        "clothes": [
           "belt",
           "tie"
         ]
       },
-      "Date": "2023-06-30",
+      "date": "2023-06-30",
       "id": "d759"
     },
     {
-      "ID": 15,
-      "Name": "Grace Lee",
-      "Donations": {
-        "Food": [
+      "name": "Grace Lee",
+      "donations": {
+        "foodItems": [
           "fruits",
           "vegetables"
         ],
-        "Money": 156,
-        "Clothes": [
+        "money": 156,
+        "clothes": [
           "dress",
           "scarf"
         ]
       },
-      "Date": "2024-12-18",
+      "date": "2024-12-18",
       "id": "6610"
     },
     {
       "ID": 16,
-      "Name": "Ivy White",
-      "Donations": {
-        "Food": [
+      "name": "Ivy White",
+      "donations": {
+        "foodItems": [
           "potatoes",
           "gravy"
         ],
-        "Money": 652,
-        "Clothes": [
+        "money": 652,
+        "clothes": [
           "jeans",
           "blouse"
         ]
       },
-      "Date": "2022-04-11",
+      "date": "2022-04-11",
       "id": "807d"
     },
     {
       "ID": 17,
-      "Name": "Ivy White",
-      "Donations": {
-        "Food": [
+      "name": "Ivy White",
+      "donations": {
+        "foodItems": [
           "soup",
           "crackers"
         ],
-        "Money": 547,
-        "Clothes": [
+        "money": 547,
+        "clothes": [
           "sweater",
           "skirt"
         ]
       },
-      "Date": "2024-05-07",
+      "date": "2024-05-07",
       "id": "40c1"
     },
     {
       "ID": 18,
-      "Name": "Nina Martin",
-      "Donations": {
-        "Food": [
+      "name": "Nina Martin",
+      "donations": {
+        "foodItems": [
           "nuts",
           "seeds"
         ],
-        "Money": 220,
-        "Clothes": [
+        "money": 220,
+        "clothes": [
           "jeans",
           "blouse"
         ]
       },
-      "Date": "2024-08-12",
+      "date": "2024-08-12",
       "id": "5670"
     },
     {
       "ID": 19,
-      "Name": "John Dem",
-      "Donations": {
-        "Food": [
+      "name": "John Dem",
+      "donations": {
+        "foodItems": [
           "potatoes",
           "gravy"
         ],
-        "Money": 233,
-        "Clothes": [
+        "money": 233,
+        "clothes": [
           "shirt",
           "pants"
         ]
       },
-      "Date": "2024-06-24",
+      "date": "2024-06-24",
       "id": "2bbc"
     },
     {
       "ID": 20,
-      "Name": "Nina Martin",
-      "Donations": {
-        "Food": [
+      "name": "Nina Martin",
+      "donations": {
+        "foodItems": [
           "cereal",
           "milk"
         ],
-        "Money": 990,
-        "Clothes": [
+        "money": 990,
+        "clothes": [
           "socks",
           "shoes"
         ]
       },
-      "Date": "2024-10-02",
+      "date": "2024-10-02",
       "id": "fbe1"
-    },
-    {
-      "id": 0.667482766006285,
-      "name": "",
-      "donations": {
-        "clothesItems": [],
-        "foodItems": [],
-        "money": ""
-      },
-      "date": ""
-    },
-    {
-      "id": 0.10599476636514038,
-      "name": "",
-      "donations": {
-        "clothesItems": [],
-        "foodItems": [],
-        "money": ""
-      },
-      "date": ""
-    },
-    {
-      "id": 0.0900694246500946,
-      "name": "",
-      "donations": {
-        "clothesItems": [],
-        "foodItems": [],
-        "money": "1200"
-      },
-      "date": ""
-    },
-    {
-      "id": 0.8720998788030254,
-      "name": "",
-      "donations": {
-        "clothesItems": [],
-        "foodItems": [],
-        "money": ""
-      },
-      "date": ""
-    },
-    {
-      "id": 0.5189211460538747,
-      "name": "",
-      "donations": {
-        "clothesItems": [],
-        "foodItems": [],
-        "money": "1200"
-      },
-      "date": ""
-    },
-    {
-      "id": 0.8072477617519358,
-      "name": "",
-      "donations": {
-        "clothesItems": [],
-        "foodItems": [],
-        "money": ""
-      },
-      "date": ""
-    },
-    {
-      "id": 0.8361083866116754,
-      "name": "Lizeth",
-      "donations": {
-        "clothesItems": [],
-        "foodItems": [],
-        "money": "1200"
-      },
-      "date": "2024-06-22"
-    },
-    {
-      "id": 0.5305850658918645,
-      "name": "d",
-      "donations": {
-        "clothesItems": [],
-        "foodItems": [],
-        "money": "1200"
-      },
-      "date": ""
     }
   ]
 }
