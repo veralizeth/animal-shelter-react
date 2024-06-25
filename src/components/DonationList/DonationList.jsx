@@ -174,26 +174,9 @@ const DonationList = () => {
                                 <td>{entry.id}</td>
                                 <td>{entry.name}</td>
                                 <td>
-                                    {/* {entry.donations.foodItems} */}
                                     {entry.donations.foodItems.map(
                                         (item, index) => (
-                                            <li key={index}>
-                                                {item}
-                                                {/* <button
-                                                    onClick={() =>
-                                                        handleEditItem(index)
-                                                    }
-                                                >
-                                                    Edit
-                                                </button>
-                                                <button
-                                                    onClick={() =>
-                                                        handleDeleteItem(index)
-                                                    }
-                                                >
-                                                    Delete
-                                                </button> */}
-                                            </li>
+                                            <li key={index}>{item}</li>
                                         )
                                     )}
                                 </td>
