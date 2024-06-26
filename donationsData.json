@@ -4,9 +4,13 @@
       "id": "49ee",
       "name": "Mona Taylor",
       "donations": {
+        "clothes": [
+          "Pants",
+          "Skirt"
+        ],
         "foodItems": [
-          "rice",
-          "lentis"
+          "Rice",
+          "Lentis"
         ],
         "money": 231
       },

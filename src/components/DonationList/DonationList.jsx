@@ -54,7 +54,7 @@ const DonationList = () => {
                 id: editId,
                 name: editName,
                 donations: {
-                    clothesItems: editClothes,
+                    clothes: editClothes,
                     foodItems: editFood,
                     money: editMoney,
                 },
@@ -74,6 +74,12 @@ const DonationList = () => {
         const updatedFoodItems = [...editFood];
         updatedFoodItems[index] = newValue;
         setEditFood(updatedFoodItems);
+    }
+
+    function handleEditClothesChange(index, newValue) {
+        const updatedClothesItems = [...editClothes];
+        updatedClothesItems[index] = newValue;
+        setEditClothes(updatedClothesItems);
     }
 
     const handleDelete = (entry) => {
@@ -121,16 +127,12 @@ const DonationList = () => {
                                                 <input
                                                     type="text"
                                                     value={item}
-                                                    onChange={(e) => {
-                                                        console.log(
-                                                            'Input value:',
-                                                            e.target.value
-                                                        );
+                                                    onChange={(e) =>
                                                         handleEditFoodChange(
                                                             index,
                                                             e.target.value
-                                                        );
-                                                    }}
+                                                        )
+                                                    }
                                                 />
                                             </li>
                                         ))}
@@ -146,13 +148,22 @@ const DonationList = () => {
                                     ></input>
                                 </td>
                                 <td>
-                                    <input
-                                        type="text"
-                                        value={editClothes}
-                                        onChange={(e) =>
-                                            setEditClothes(e.target.value)
-                                        }
-                                    ></input>
+                                    <ul>
+                                        {editClothes.map((item, index) => (
+                                            <li key={index}>
+                                                <input
+                                                    type="text"
+                                                    value={item}
+                                                    onChange={(e) =>
+                                                        handleEditClothesChange(
+                                                            index,
+                                                            e.target.value
+                                                        )
+                                                    }
+                                                />
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </td>
                                 <td>
                                     <input
@@ -181,7 +192,13 @@ const DonationList = () => {
                                     )}
                                 </td>
                                 <td>{entry.donations.money}</td>
-                                <td>{entry.donations.clothes}</td>
+                                <td>
+                                    {entry.donations.clothes.map(
+                                        (item, index) => (
+                                            <li key={index}>{item}</li>
+                                        )
+                                    )}
+                                </td>
                                 <td>{entry.date}</td>
                                 <td>
                                     <button onClick={() => handleEdit(entry)}>
