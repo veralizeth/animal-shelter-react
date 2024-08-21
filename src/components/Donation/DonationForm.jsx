@@ -3,44 +3,69 @@ import React, { useState } from 'react';
 import './DonationForm.css';
 
 const DonationForm = () => {
-    const [money, setMoney] = useState('');
-    const [foodItems, setFoodItems] = useState([]);
-    const [clothesItems, setClothesItems] = useState([]);
-    const [foodInput, setFoodInput] = useState([]);
-    const [clothesInput, setClothesInput] = useState([]);
-    const [name, setName] = useState('');
-    const [date, setDate] = useState('');
     const [data, setData] = useState([]);
     const [error, setError] = useState('');
-
-    const handleMoneyChange = (event) => {
-        setMoney(event.target.value);
+    const initialState = {
+        money: '',
+        foodItems: [],
+        clothesItems: [],
+        foodInput: '',
+        clothesInput: '',
+        name: '',
+        date: '',
     };
 
-    const handleFoodChange = (event) => {
-        setFoodInput(event.target.value);
-    };
+    const [formData, setFormData] = useState(initialState);
 
-    const handleClothesChange = (event) => {
-        setClothesInput(event.target.value);
+    const handleChange = (e) => {
+        const { name, value, dataset } = e.target;
+
+        if (dataset.arrayname) {
+            const arrayName = dataset.arrayname;
+
+            setFormData((prevState) => ({
+                ...prevState,
+                [arrayName]: [...prevState[arrayName], value],
+                [name]: '',
+            }));
+        } else {
+            setFormData((prevState) => ({
+                ...prevState,
+                [name]: value,
+            }));
+        }
     };
 
     const addFoodItem = () => {
-        if (foodInput.trim()) {
-            setFoodItems([...foodItems, foodInput.trim()]);
-            setFoodInput('');
+        if (formData.foodInput.trim()) {
+            setFormData((prevState) => ({
+                ...prevState,
+                foodItems: [...prevState.foodItems, formData.foodInput.trim()],
+                foodInput: '',
+            }));
         }
     };
 
     const addClothesItem = () => {
-        if (clothesInput.trim()) {
-            setClothesItems([...clothesItems, clothesInput.trim()]);
-            setClothesInput('');
+        if (formData.clothesInput.trim()) {
+            setFormData((prevState) => ({
+                ...prevState,
+                clothesItems: [
+                    ...prevState.clothesItems,
+                    formData.clothesInput.trim(),
+                ],
+                clothesInput: '',
+            }));
         }
     };
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (!money && foodItems.length === 0 && clothesItems.length === 0) {
+        if (
+            !formData.money &&
+            formData.foodItems.length === 0 &&
+            formData.clothesItems.length === 0
+        ) {
             setError(
                 'Please provide at least one type of donation: money, food, or clothes.'
             );
@@ -53,34 +78,38 @@ const DonationForm = () => {
         axios
             .post('http://localhost:3001/data', {
                 id: id,
-                name: name,
+                name: formData.name,
                 donations: {
-                    clothesItems: clothesItems,
-                    foodItems: foodItems,
-                    money: money,
+                    clothesItems: formData.clothesItems,
+                    foodItems: formData.foodItems,
+                    money: formData.money,
                 },
-                date: date,
+                date: formData.date,
             })
             .then((res) => {
                 setData([...data, res.data]);
-                setName('');
-                setDate('');
-                setFoodItems([]);
-                setClothesItems([]);
-                setMoney('');
+                setFormData(initialState);
             })
             .catch((err) => console.log(err));
     };
 
     const removeClothesItem = (index) => {
         // Using (_) Just need to access the index of the array but no need to use the element itself.
-        const newClothesItems = clothesItems.filter((_, i) => i !== index);
-        setClothesItems(newClothesItems);
+        const newClothesItems = formData.clothesItems.filter(
+            (_, i) => i !== index
+        );
+        setFormData({
+            ...formData,
+            clothesItems: newClothesItems,
+        });
     };
 
     const removeFoodItem = (index) => {
-        const newFoodItems = foodItems.filter((_, i) => i !== index);
-        setFoodItems(newFoodItems);
+        const newFoodItems = formData.foodItems.filter((_, i) => i !== index);
+        setFormData({
+            ...formData,
+            foodItems: newFoodItems,
+        });
     };
 
     return (
@@ -90,8 +119,9 @@ const DonationForm = () => {
                 <input
                     required
                     type="text"
+                    name="name"
                     placeholder="Enter Name"
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={handleChange}
                 ></input>
             </div>
             <div>
@@ -99,8 +129,8 @@ const DonationForm = () => {
                     Amount of Money:
                     <input
                         type="number"
-                        value={money}
-                        onChange={handleMoneyChange}
+                        value={formData.money}
+                        onChange={handleChange}
                     />
                 </label>
             </div>
@@ -109,15 +139,22 @@ const DonationForm = () => {
                     Food Items:
                     <input
                         type="text"
-                        value={foodInput}
-                        onChange={handleFoodChange}
+                        name="foodInput"
+                        value={formData.foodInput}
+                        data-arrayname="foodItems"
+                        onChange={(e) =>
+                            setFormData({
+                                ...formData,
+                                foodInput: e.target.value,
+                            })
+                        }
                     />
                     <button type="button" onClick={addFoodItem}>
                         Add Food Item
                     </button>
                 </label>
                 <ul>
-                    {foodItems.map((item, index) => (
+                    {formData.foodItems.map((item, index) => (
                         <li key={index}>
                             {item}
                             <button
@@ -136,15 +173,22 @@ const DonationForm = () => {
                     Clothes Items:
                     <input
                         type="text"
-                        value={clothesInput}
-                        onChange={handleClothesChange}
+                        name="clothesInput"
+                        value={formData.clothesInput}
+                        data-arrayname="clothesItems"
+                        onChange={(e) =>
+                            setFormData({
+                                ...formData,
+                                clothesInput: e.target.value,
+                            })
+                        }
                     />
                     <button type="button" onClick={addClothesItem}>
                         Add Clothes Item
                     </button>
                 </label>
                 <ul>
-                    {clothesItems.map((item, index) => (
+                    {formData.clothesItems.map((item, index) => (
                         <li key={index}>
                             {item}
                             <button
@@ -161,8 +205,9 @@ const DonationForm = () => {
             <div>
                 <input
                     type="date"
+                    name="date"
                     placeholder="Select a Date"
-                    onChange={(e) => setDate(e.target.value)}
+                    onChange={handleChange}
                     required
                 ></input>
             </div>
